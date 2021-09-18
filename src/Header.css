@@ -4,3 +4,10 @@
     font-size: 20px;
     height:4rem;
 }
+.navLink{
+    color:#E8D454!important;
+}
+.navLink:hover{
+    background-color:#E8D454 ;
+    color:#352B58!important;
+}
