@@ -68,46 +68,55 @@ function Advanced() {
 
   return (
     <div>
-      <link
-        href="https://fonts.googleapis.com/css?family=Damion&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css?family=Alatsi&display=swap"
-        rel="stylesheet"
-      />
-      <h1 className="firstHead"> TITLE HERE </h1>
-      <div className="cardContainer">
-        {characters.map((character, index) => (
-          <TinderCard
-            ref={childRefs[index]}
-            className="swipe"
-            key={character.name}
-            onSwipe={(dir) => swiped(dir, character.name)}
-            onCardLeftScreen={() => outOfFrame(character.name)}
-          >
-            <div
-              style={{ backgroundImage: "url(" + character.url + ")" }}
-              className="cardBeingSwiped"
-            >
-              <h3>{character.name}</h3>
+      <div className="swipePage">
+        <div style={{ paddingRight: '900px', paddingTop: '20px' }}>
+          <button className="buttonwala" style={{ float: 'left' }} className="heroButton">Go Back</button>
+        </div>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              {lastDirection ? (
+                <h2 key={lastDirection} className="infoText">
+                  You swiped {lastDirection}
+                </h2>
+              ) : (
+                <h2 className="infoText">
+                  Swipe a card or press a button to get started!
+                </h2>
+              )}
             </div>
-          </TinderCard>
-        ))}
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="cardContainer">
+                {characters.map((character, index) => (
+                  <TinderCard
+                    ref={childRefs[index]}
+                    className="swipe"
+                    key={character.name}
+                    onSwipe={(dir) => swiped(dir, character.name)}
+                    onCardLeftScreen={() => outOfFrame(character.name)}
+                  >
+                    <div
+                      style={{ backgroundImage: "url(" + character.url + ")" }}
+                      className="cardBeingSwiped"
+                    >
+                      <h3>{character.name}</h3>
+                    </div>
+                  </TinderCard>
+                ))}
+              </div>
+
+              <div className="buttonForSwiping">
+                <div className="btn-group">
+                  <div className="buttonFor1">
+                    <button onClick={() => swipe("left")}>SWIPE LEFT!</button>
+                  </div>
+                  <button onClick={() => swipe("right")}>SWIPE RIGHT!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="buttonForSwiping">
-        <button onClick={() => swipe("left")}>Swipe left!</button>
-        <button onClick={() => swipe("right")}>Swipe right!</button>
-      </div>
-      {lastDirection ? (
-        <h2 key={lastDirection} className="infoText">
-          You swiped {lastDirection}
-        </h2>
-      ) : (
-        <h2 className="infoText">
-          Swipe a card or press a button to get started!
-        </h2>
-      )}
     </div>
   );
 }

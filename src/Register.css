@@ -1,16 +1,33 @@
+.formPage{
+    background-color: #dadcdd;
+}
+
 .Submitbtn {
-background-color: blueviolet;
+background-color: #603bbb;
 color:aliceblue;
+font-size: 20px;
+font-weight: 700;
 }
 
 .form-container{
- background-color:rgb(40,22,72);
+    background: radial-gradient(
+        ellipse at left bottom,
+        rgba(22, 24, 47, 1) 0%,
+        rgba(38, 20, 72, 0.9) 59%,
+        rgba(17, 27, 75, 0.9) 100%
+        );
  padding: 30px;
  border-radius: 10px;
  box-shadow: 0 0 10 0 #000;
 
 }
 .whitetext{
-    color: aliceblue;
+    color:#E8D454;
+    font-weight: 600;
 }
-
+.headerForForm{
+    padding-left: 210px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-weight: 600;
+}
