@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useHistory,
+} from "react-router-dom";
 import "./App.css";
 import Landingpage from "./Landingpage.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,6 +12,7 @@ import fire from "./fire";
 import index from "./index";
 import Login from "./Login";
 import Hero from "./Hero";
+import Register from "./Register";
 
 function App() {
   const [user, setUser] = useState("");
@@ -85,6 +91,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login}>
           {user ? (
             <Hero handleLogout={handleLogout} />
