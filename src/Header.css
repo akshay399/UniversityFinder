@@ -6,6 +6,7 @@
 }
 .navLink{
     color:#E8D454!important;
+    font-weight: 500;
 }
 .navLink:hover{
     background-color:#E8D454 ;

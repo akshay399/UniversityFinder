@@ -97,6 +97,9 @@ function Landingpage() {
                     </div>
                 </div>
             </div>
+            <div className="section5Footer">
+                <p className="pt-4 text-muted text-center">UNISEARCH © 2021 Copyrights belongs to Akshay,Meghna and Shreya </p>
+            </div>
         </div>
     );
 }
