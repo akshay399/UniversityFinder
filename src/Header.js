@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
@@ -13,13 +14,14 @@ function Header() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link className="navLink" href="#home">
+                            <Nav.Link href="#home" style={{ color: "#E8D454" }}>
                                 Home
                             </Nav.Link>
-                            <Nav.Link className="navLink" href="/login">
+                            <Nav.Link href="login" style={{ color: "#E8D454" }}>
                                 Register
                             </Nav.Link>
-                            <Nav.Link className="navLink" href="#link">
+
+                            <Nav.Link href="#link" style={{ color: "#E8D454" }}>
                                 Contact Us
                             </Nav.Link>
                         </Nav>

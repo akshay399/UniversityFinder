@@ -85,30 +85,27 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Route exact path="/login" component={Login}>
+          {user ? (
+            <Hero handleLogout={handleLogout} />
+          ) : (
+            <Login
+              emial={email}
+              setEmail={setEmail}
+              password={password}
+              setPassword={setPassword}
+              handleLogin={handleLogin}
+              handleSignup={handleSignup}
+              hasAccount={hasAccount}
+              setHasAccount={setHasAccount}
+              emailError={emailError}
+              passwordError={passwordError}
+            />
+          )}
+        </Route>
+
         <Switch>
-          <Route path="/login">
-            {user ? (
-              <Hero handleLogout={handleLogout} />
-            ) : (
-              <Login
-                emial={email}
-                setEmail={setEmail}
-                password={password}
-                setPassword={setPassword}
-                handleLogin={handleLogin}
-                handleSignup={handleSignup}
-                hasAccount={hasAccount}
-                setHasAccount={setHasAccount}
-                emailError={emailError}
-                passwordError={passwordError}
-              />
-            )}
-          </Route>
-        </Switch>
-      </Router>
-      <Router>
-        <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Landingpage />
           </Route>
         </Switch>
