@@ -11,16 +11,18 @@ import ShreyaPic from '../src/Pictures/Shreya.jpeg';
 function Landingpage() {
     return (
         <div>
-            <Headerbar />
-            <div className="section1">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-                            <h1 className="titleSection1">UNISEARCH</h1>
-                            <h5>One Stop Solution For All Your Dream College Search Problems!</h5>
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+            <div className="section0">
+                <Headerbar />
+                <div className="section1">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                                <h1 className="titleSection1">UNISEARCH</h1>
+                                <h5>One Stop Solution For All Your Dream College Search Problems!</h5>
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
 
+                            </div>
                         </div>
                     </div>
                 </div>
