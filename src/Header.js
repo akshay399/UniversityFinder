@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -21,9 +22,11 @@ function Header() {
               <Nav.Link href="#link" style={{ color: "#E8D454" }}>
                 About Us
               </Nav.Link>
-              <Nav.Link href="/login" style={{ color: "#E8D454" }}>
+
+              <Nav.Link href="login" style={{ color: "#E8D454" }}>
                 Sign in/up
               </Nav.Link>
+
               <Nav.Link href="#link" style={{ color: "#E8D454" }}>
                 Contact Us
               </Nav.Link>
