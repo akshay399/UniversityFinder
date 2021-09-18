@@ -77,22 +77,22 @@ function Landingpage() {
             </div>
             <div className="section4">
                 <div className="container">
-                    <h2 style={{ textAlign: "center", paddingBottom: "20px" }}>
+                    <h2 style={{ textAlign: "center", paddingBottom: "20px", fontWeight: '700' }}>
                         OUR TEAM
                     </h2>
                     <p></p>
                     <div className="row">
                         <div className="col-lg-4 col-md-4 col-sm-12 col-12">
                             <CardComponent image={AkshayPic} name="Akshay Chopade"
-                                about="Hello! I am a final year student from Maharastra, India." />
+                                about="Hello! I am a B.E,IT final year student from Maharastra, India." />
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12 col-12">
                             <CardComponent image={MeghnaPic} name="Meghna Nakhate"
-                                about="Hey! I am a pre-final year student from Maharastra, India." />
+                                about="Hey! I am a B.E,IT pre-final year student from Maharastra, India." />
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12 col-12">
                             <CardComponent image={ShreyaPic} name="Shreya Ayyagari"
-                                about="Hie! I am final year student from Tamil Nadu, India." />
+                                about="Hie! I am B.E,CSE final year student from Tamil Nadu, India." />
                         </div>
                     </div>
                 </div>

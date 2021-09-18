@@ -5,10 +5,10 @@ import Card from 'react-bootstrap/Card'
 function Cardcomponent(props) {
     return (
         <div>
-            <Card style={{ width: '19rem', marginLeft: '20px' }}>
+            <Card className="cardForTeam" style={{ width: '19rem', marginLeft: '20px' }}>
                 <Card.Img variant="top" src={props.image} style={{ height: '17rem' }} />
                 <Card.Body>
-                    <Card.Title>{props.name}</Card.Title>
+                    <Card.Title style={{ fontWeight: '600' }}>{props.name}</Card.Title>
                     <Card.Text>
                         {props.about}
                     </Card.Text>
