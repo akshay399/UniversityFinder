@@ -6,6 +6,7 @@ import {
   useHistory,
 } from "react-router-dom";
 import "./App.css";
+import "./Card.css";
 import Landingpage from "./Landingpage.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import fire from "./fire";
@@ -13,6 +14,9 @@ import index from "./index";
 import Login from "./Login";
 import Hero from "./Hero";
 import Register from "./Register";
+// import Switch from "react-ios-switch";
+import Advanced from "./examples/Advanced";
+import Simple from "./examples/Simple";
 
 function App() {
   const [user, setUser] = useState("");
@@ -21,6 +25,9 @@ function App() {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
+
+  //cards
+  const [showAdvanced, setShowAdvanced] = useState(true);
 
   const clearInputs = () => {
     setEmail("");
@@ -91,6 +98,9 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Route exact path="/cards">
+          <Advanced />
+        </Route>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login}>
           {user ? (
