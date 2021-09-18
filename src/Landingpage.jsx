@@ -3,6 +3,10 @@ import Headerbar from './Header'
 import './Landingpage.css'
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
+import CardComponent from './Cardcomponent'
+import AkshayPic from '../src/Pictures/Akshay.jpeg';
+import MeghnaPic from '../src/Pictures/Meghna.jpeg';
+import ShreyaPic from '../src/Pictures/Shreya.jpeg';
 
 function Landingpage() {
     return (
@@ -54,7 +58,25 @@ function Landingpage() {
             </div>
             <div className="section4">
                 <div className="container">
-
+                    <h2 style={{ textAlign: 'center', paddingBottom: '20px' }}>OUR TEAM</h2>
+                    <p></p>
+                    <div className="row">
+                        <div className="col-lg-4 col-md-4 col-sm-12 col-12">
+                            <CardComponent
+                                image={AkshayPic}
+                                name="Akshay Chopade" />
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-sm-12 col-12">
+                            <CardComponent
+                                image={MeghnaPic}
+                                name="Meghna Nakhate" />
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-sm-12 col-12">
+                            <CardComponent
+                                image={ShreyaPic}
+                                name="Shreya Ayyagari" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
