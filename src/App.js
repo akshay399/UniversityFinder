@@ -1,9 +1,19 @@
-
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
+import Landingpage from "./Landingpage.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
+      <Router>
+        <Switch>
+          <Route path="/">
+            <Landingpage />
+          </Route>
+        </Switch>
+      </Router>
 
     </div>
   );
