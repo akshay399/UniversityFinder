@@ -1,4 +1,4 @@
-// import "../Card.css";
+
 
 const React = require("react");
 const sleep = require("p-sleep");

@@ -76,7 +76,7 @@ function Advanced() {
         href="https://fonts.googleapis.com/css?family=Alatsi&display=swap"
         rel="stylesheet"
       />
-      <h1> TITLE HERE </h1>
+      <h1 className="firstHead"> TITLE HERE </h1>
       <div className="cardContainer">
         {characters.map((character, index) => (
           <TinderCard
@@ -88,14 +88,14 @@ function Advanced() {
           >
             <div
               style={{ backgroundImage: "url(" + character.url + ")" }}
-              className="card"
+              className="cardBeingSwiped"
             >
               <h3>{character.name}</h3>
             </div>
           </TinderCard>
         ))}
       </div>
-      <div className="buttons">
+      <div className="buttonForSwiping">
         <button onClick={() => swipe("left")}>Swipe left!</button>
         <button onClick={() => swipe("right")}>Swipe right!</button>
       </div>

@@ -16,7 +16,7 @@ import Hero from "./Hero";
 import Register from "./Register";
 // import Switch from "react-ios-switch";
 import Advanced from "./examples/Advanced";
-import Simple from "./examples/Simple";
+
 
 function App() {
   const [user, setUser] = useState("");

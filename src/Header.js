@@ -13,17 +13,17 @@ function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" style={{ color: "#E8D454" }}>
+              <Nav.Link className="navLink" href="#home" >
                 Home
               </Nav.Link>
-              <Nav.Link href="login" style={{ color: "#E8D454" }}>
+              <Nav.Link className="navLink" href="login" >
                 Register
               </Nav.Link>
 
-              <Nav.Link href="register" style={{ color: "#E8D454" }}>
+              <Nav.Link className="navLink" href="register" >
                 Contact Us
               </Nav.Link>
-              <Nav.Link href="cards" style={{ color: "#E8D454" }}>
+              <Nav.Link className="navLink" href="cards">
                 Cards
               </Nav.Link>
             </Nav>
