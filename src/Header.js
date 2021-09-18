@@ -23,6 +23,9 @@ function Header() {
               <Nav.Link href="register" style={{ color: "#E8D454" }}>
                 Contact Us
               </Nav.Link>
+              <Nav.Link href="cards" style={{ color: "#E8D454" }}>
+                Cards
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
