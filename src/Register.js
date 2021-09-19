@@ -29,7 +29,10 @@ const Register = () => {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid formPage">
+      <h2 className="headerForForm">
+        Fill In The Form To Get Personalised Updates And Results
+      </h2>
       <div className=" row justify-content-center">
         <div className=" col-12 col-sm-6 ">
           <h5 className="container">Hey! welcome to unifinder</h5>
