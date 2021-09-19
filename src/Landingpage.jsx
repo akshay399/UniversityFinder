@@ -38,17 +38,18 @@ function Landingpage() {
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                             <div className="panel text-left">
-                                <h2>Confused On which College To Choose?</h2>
+                                <h3 style={{ fontWeight: '600' }}>Confused On which College To Choose?</h3>
                                 <p className="pt-4">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.
+                                    <span style={{ fontWeight: '600' }}>DO NOT WORRY!</span> We have brought to you <span style={{ fontWeight: '600' }}>UniSearch!</span> An all in one solution to all the
+                                    problems faced by students when trying to search for the right college to attend.Everyone is aware of the tremendous efforts a student has to make to search for colleges from a particular country, especially when
+                                    they have absolutely <span style={{ fontWeight: '600' }}>NO</span> idea about that country or the colleges of that country.
                                 </p>
                                 <p>
-                                    Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                    occaecat cupidatat non proident, sunt in culpa qui officia.
+                                    UniSearch helps students in choosing the right colleges based on
+                                    their country preferences. All a student has to do is fill up a form and write all the
+                                    details mentioned and based on the preferences chosen, the college images will be displayed
+                                    in a <span style={{ fontWeight: '600' }}>"Swipe"</span> manner.If the student likes a college, the student can click on the image and
+                                    it will redirect the student to the official website of that particular college.
                                 </p>
                             </div>
                         </div>
@@ -57,7 +58,7 @@ function Landingpage() {
             </div>
             <div className="section3">
                 <div className="container text-center">
-                    <h2>Subscribe To Our Newsletter</h2>
+                    <h2 style={{ fontWeight: '600' }}>Subscribe To Our Newsletter</h2>
                     <InputGroup
                         style={{
                             height: "50px",
@@ -71,7 +72,7 @@ function Landingpage() {
                             aria-label="Recipient's Email Id"
                             aria-describedby="basic-addon2"
                         />
-                        <InputGroup.Text id="basic-addon2">Subscribe</InputGroup.Text>
+                        <InputGroup.Text style={{ fontWeight: '600' }} id="basic-addon2">Subscribe</InputGroup.Text>
                     </InputGroup>
                 </div>
             </div>
