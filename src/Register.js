@@ -1,177 +1,86 @@
-import React from "react";
-import { useFormik } from "formik";
+import { useState } from "react";
+import database from "./firbase";
+import "./Register.css";
 
 import { Redirect } from "react-router-dom";
 import Advanced from "./examples/Advanced";
 
-import "./Register.css";
-
 const Register = () => {
-  // const onSubmit2 = () => {
-  //   console.log("in onsubmit 2");
+  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState();
+  const [phone, setPhone] = useState();
+  const [location, setLocation] = useState();
+  const [email, setEmail] = useState();
+  const [country, setCountry] = useState();
 
-  //   this.props.history.push("/posts/");
-  // };
-  const validate = (values) => {
-    const errors = {};
-
-    if (!values.email) {
-      errors.email = "Required";
-    } else if (values.email.length < 4) {
-      errors.email = "Must be 5 characters or more";
-    }
-
-    // if (!values.password) {
-    //   errors.password = 'Required'
-    // } else if (values.password.length < 8) {
-    //   errors.password = 'Must be 8 characters or more'
-    // } else if (values.password === '12345678') {
-    //   errors.password = 'Must not be 12345678 !!!'
-    // }
-
-    if (!values.firstName) {
-      errors.firstName = "Required";
-    }
-
-    if (!values.lastName) {
-      errors.lastName = "Required";
-    }
-
-    if (!values.phone) {
-      errors.phone = "Required";
-    }
-
-    if (!values.location) {
-      errors.location = "Required";
-    }
-
-    return errors;
+  // Push Function
+  const Push = () => {
+    database
+      .ref("students")
+      .push({
+        firstName: firstName,
+        lastName: lastName,
+        phone: phone,
+        location: location,
+        email: email,
+        country: country,
+      })
+      .catch(alert);
   };
 
-  const formik = useFormik({
-    initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: 0,
-      location: "",
-    },
-    onSubmit: (values) => {
-      alert("Details successfully submitted!");
-
-      return <Redirect to="/cards/" />;
-    },
-  });
   return (
-
     <div className="container-fluid formPage">
-      <h2 className="headerForForm">Fill In The Form To Get Personalised Updates And Results</h2>
+      <h2 className="headerForForm">
+        Fill In The Form To Get Personalised Updates And Results
+      </h2>
       <div className=" row justify-content-center">
         <div className=" col-12 col-sm-6 ">
-
-          <form onSubmit={formik.handleSubmit} className="mb-3 form-container">
-            <div className="mb-3 p-3">
-              <label htmlFor="firstName" className="form-label whitetext">
-                First Name
-              </label>
-              <input
-                id="firstName"
-                name="firstName"
-                type="text"
-                className="form-control"
-                onChange={formik.handleChange}
-                value={formik.values.firstName}
-              />
-              {formik.touched.firstName && formik.errors.firstName ? (
-                <div className="error">{formik.errors.firstName}</div>
-              ) : null}
-            </div>
-            <div className="mb-3 p-3 ">
-              <label htmlFor="lastName" className="form-label  whitetext">
-                Last Name
-              </label>
-              <input
-                id="lastName"
-                name="lastName"
-                type="text"
-                className="form-control "
-                onChange={formik.handleChange}
-                value={formik.values.lastName}
-              />
-              {formik.errors.lastName ? (
-                <div className="error">{formik.errors.lastName}</div>
-              ) : null}
-            </div>
-            <div className="mb-3 p-3 ">
-              <label htmlFor="email" className="form-label  whitetext">
-                Email Address
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                className="form-control "
-                onChange={formik.handleChange}
-                value={formik.values.email}
-              />
-              {formik.errors.email ? (
-                <div className="error">{formik.errors.email}</div>
-              ) : null}
-            </div>
-            <div className="mb-3 p-3 ">
-              <label htmlFor="email" className="form-label  whitetext">
-                Phone
-              </label>
-              <input
-                id="phone"
-                name="phone"
-                type="phone"
-                className="form-control "
-                onChange={formik.handleChange}
-                value={formik.values.phone}
-              />
-              {formik.errors.phone ? (
-                <div className="error">{formik.errors.phone}</div>
-              ) : null}
-            </div>{" "}
-            <div className="mb-3 p-3 ">
-              <label htmlFor="email" className="form-label  whitetext">
-                Country
-              </label>
-              <input
-                id="country"
-                name="country"
-                type="country"
-                className="form-control "
-                onChange={formik.handleChange}
-                value={formik.values.country}
-              />{" "}
-              {formik.errors.country ? (
-                <div className="error">{formik.errors.country}</div>
-              ) : null}
-            </div>{" "}
-            <div className="mb-3 p-3 ">
-              <label htmlFor="email" className="form-label  whitetext">
-                Expected College Location
-              </label>
-              <input
-                id="location"
-                name="location"
-                type="location"
-                className="form-control "
-                onChange={formik.handleChange}
-                value={formik.values.location}
-              />{" "}
-              {formik.errors.location ? (
-                <div className="error">{formik.errors.location}</div>
-              ) : null}
-            </div>
-            <div style={{ paddingLeft: '120px' }}>
-              <button type="submit" className="btn btn-block mb-3 p-2 Submitbtn">
-                Submit
-              </button>
-            </div>
-          </form>
+          <h5 className="container">Hey! welcome to unifinder</h5>
+          <center>
+            <input
+              placeholder="Enter your first name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+            <br />
+            <br />
+            <input
+              placeholder="Enter your last name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+            <br />
+            <br />
+            <input
+              placeholder="Enter your phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+            <br />
+            <br />
+            <input
+              placeholder="Enter your location"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+            />
+            <br />
+            <br />
+            <input
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <br />
+            <br />
+            <input
+              placeholder="Enter your prefered country"
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
+            />
+            <br />
+            <br />
+            <button onClick={Push}>PUSH</button>
+          </center>
         </div>
       </div>
     </div>
@@ -179,3 +88,193 @@ const Register = () => {
 };
 
 export default Register;
+
+// import React, { useState, useEffect } from "react";
+// import database from "./fire.js";
+
+// import { useFormik } from "formik";
+
+// import { Redirect } from "react-router-dom";
+// import Advanced from "./examples/Advanced";
+
+// import "./Register.css";
+// // import { useState } from "react";
+
+// const Register = () => {
+//   const [firstName, setFirstName] = useState();
+//   const [lastName, setLastName] = useState();
+//   const [phone, setPhone] = useState();
+//   const [location, setLocation] = useState();
+//   const [email, setEmail] = useState();
+//   const [country, setCountry] = useState();
+
+//   const Push = () => {
+//     database
+//       .ref("user")
+//       .set({
+//         firstName: firstName,
+//         lastName: lastName,
+//         phone: phone,
+//         location: location,
+//         email: email,
+//         country: country,
+//       })
+//       .catch(alert);
+//   };
+
+//   const validate = (values) => {
+//     const errors = {};
+
+//     if (!values.email) {
+//       errors.email = "Required";
+//     } else if (values.email.length < 4) {
+//       errors.email = "Must be 5 characters or more";
+//     }
+
+//     // if (!values.password) {
+//     //   errors.password = 'Required'
+//     // } else if (values.password.length < 8) {
+//     //   errors.password = 'Must be 8 characters or more'
+//     // } else if (values.password === '12345678') {
+//     //   errors.password = 'Must not be 12345678 !!!'
+//     // }
+
+//     if (!values.firstName) {
+//       errors.firstName = "Required";
+//     }
+
+//     if (!values.lastName) {
+//       errors.lastName = "Required";
+//     }
+
+//     if (!values.phone) {
+//       errors.phone = "Required";
+//     }
+
+//     if (!values.location) {
+//       errors.location = "Required";
+//     }
+
+//     return errors;
+//   };
+
+//   const formik = useFormik({
+//     onSubmit: (values) => {
+//       alert("Details successfully submitted!");
+
+//       return <Redirect to="/cards/" />;
+//     },
+//   });
+//   return (
+//     <div className="container-fluid">
+//       <div className=" row justify-content-center">
+//         <div className=" col-12 col-sm-6 ">
+//           <h5 className="container">Hey! welcome to unifinder</h5>
+//           <form onSubmit={formik.handleSubmit} className="mb-3 form-container">
+//             <div className="mb-3 p-3">
+//               <label htmlFor="firstName" className="form-label whitetext">
+//                 First Name
+//               </label>
+//               <input
+//                 id="firstName"
+//                 name="firstName"
+//                 type="text"
+//                 className="form-control"
+//                 onChange={(e) => setFirstName(e.target.value)}
+//                 // value={formik.values.firstName}
+//               />
+//               {/* {formik.touched.firstName && formik.errors.firstName ? (
+//                 <div className="error">{formik.errors.firstName}</div>
+//               ) : null} */}
+//             </div>
+//             <div className="mb-3 p-3 ">
+//               <label htmlFor="lastName" className="form-label  whitetext">
+//                 Last Name
+//               </label>
+//               <input
+//                 id="lastName"
+//                 name="lastName"
+//                 type="text"
+//                 className="form-control "
+//                 onChange={(e) => setLastName(e.target.value)}
+//                 // value={formik.values.lastName}
+//               />
+//               {formik.errors.lastName ? (
+//                 <div className="error">{formik.errors.lastName}</div>
+//               ) : null}
+//             </div>
+//             <div className="mb-3 p-3 ">
+//               <label htmlFor="email" className="form-label  whitetext">
+//                 Email Address
+//               </label>
+//               <input
+//                 id="email"
+//                 name="email"
+//                 type="email"
+//                 className="form-control "
+//                 onChange={(e) => setEmail(e.target.value)}
+//                 // value={formik.values.email}
+//               />
+//               {formik.errors.email ? (
+//                 <div className="error">{formik.errors.email}</div>
+//               ) : null}
+//             </div>
+//             <div className="mb-3 p-3 ">
+//               <label htmlFor="email" className="form-label  whitetext">
+//                 Phone
+//               </label>
+//               <input
+//                 id="phone"
+//                 name="phone"
+//                 type="phone"
+//                 className="form-control "
+//                 onChange={(e) => setPhone(e.target.value)}
+//                 // value={formik.values.phone}
+//               />
+//               {formik.errors.phone ? (
+//                 <div className="error">{formik.errors.phone}</div>
+//               ) : null}
+//             </div>{" "}
+//             <div className="mb-3 p-3 ">
+//               <label htmlFor="email" className="form-label  whitetext">
+//                 Country
+//               </label>
+//               <input
+//                 id="country"
+//                 name="country"
+//                 type="country"
+//                 className="form-control "
+//                 onChange={(e) => setCountry(e.target.value)}
+//                 // value={formik.values.country}
+//               />{" "}
+//               {formik.errors.country ? (
+//                 <div className="error">{formik.errors.country}</div>
+//               ) : null}
+//             </div>{" "}
+//             <div className="mb-3 p-3 ">
+//               <label htmlFor="email" className="form-label  whitetext">
+//                 Expected College Location
+//               </label>
+//               <input
+//                 id="location"
+//                 name="location"
+//                 type="location"
+//                 className="form-control "
+//                 onChange={(e) => setLocation(e.target.value)}
+//                 // value={formik.values.location}
+//               />{" "}
+//               {formik.errors.location ? (
+//                 <div className="error">{formik.errors.location}</div>
+//               ) : null}
+//             </div>
+//             <button onClick={Push} className="btn btn-block mb-3 p-3 Submitbtn">
+//               Submit
+//             </button>
+//           </form>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Register;
