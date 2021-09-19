@@ -6,10 +6,10 @@
 .Submitbtn {
 background-color: #603bbb;
 color:white;
-font-size: 20px;
+font-size: 18px;
 font-weight: 700;
 width: 300px;
-
+border-radius: 10px;
 float: center;
 }
 .Submitbtn:hover{
