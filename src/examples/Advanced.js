@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 // import TinderCard from '../react-tinder-card/index'
 import TinderCard from "react-tinder-card";
+import { useHistory } from "react-router-dom";
 
 const db = [
   {
@@ -39,7 +40,7 @@ let charactersState = db; // This fixes issues with updating characters state fo
 function Advanced() {
   const [characters, setCharacters] = useState(db);
   const [lastDirection, setLastDirection] = useState();
-
+  let history = useHistory();
   const childRefs = useMemo(
     () =>
       Array(db.length)
@@ -77,8 +78,15 @@ function Advanced() {
   return (
     <div>
       <div className="swipePage">
-        <div style={{ paddingRight: '900px', paddingTop: '20px' }}>
-          <button className="buttonwala" style={{ float: 'left' }} className="heroButton">Go Back</button>
+        <div style={{ paddingRight: "900px", paddingTop: "20px" }}>
+          <button
+            onClick={() => history.goBack()}
+            className="buttonwala"
+            style={{ float: "left" }}
+            className="heroButton"
+          >
+            Go Back
+          </button>
         </div>
         <div className="container-fluid">
           <div className="row">
