@@ -1,5 +1,6 @@
 .formPage{
     background-color: #dadcdd;
+    padding-bottom: 43px;
 }
 
 .Submitbtn {
@@ -8,6 +9,7 @@ color:white;
 font-size: 20px;
 font-weight: 700;
 width: 300px;
+
 float: center;
 }
 .Submitbtn:hover{
@@ -31,6 +33,7 @@ float: center;
 .whitetext{
     color:#E8D454;
     font-weight: 600;
+    float:left;
 }
 .headerForForm{
     padding-left: 210px;
