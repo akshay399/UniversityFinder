@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/UniversityFinder/static/css/main.32df938b.chunk.css",
+    "main.js": "/UniversityFinder/static/js/main.f56cc496.chunk.js",
+    "main.js.map": "/UniversityFinder/static/js/main.f56cc496.chunk.js.map",
+    "runtime-main.js": "/UniversityFinder/static/js/runtime-main.e05dc03b.js",
+    "runtime-main.js.map": "/UniversityFinder/static/js/runtime-main.e05dc03b.js.map",
+    "static/css/2.818011ed.chunk.css": "/UniversityFinder/static/css/2.818011ed.chunk.css",
+    "static/js/2.214bbc1c.chunk.js": "/UniversityFinder/static/js/2.214bbc1c.chunk.js",
+    "static/js/2.214bbc1c.chunk.js.map": "/UniversityFinder/static/js/2.214bbc1c.chunk.js.map",
+    "static/js/3.bd1bcb3a.chunk.js": "/UniversityFinder/static/js/3.bd1bcb3a.chunk.js",
+    "static/js/3.bd1bcb3a.chunk.js.map": "/UniversityFinder/static/js/3.bd1bcb3a.chunk.js.map",
+    "index.html": "/UniversityFinder/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/UniversityFinder/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.32df938b.chunk.css.map": "/UniversityFinder/static/css/main.32df938b.chunk.css.map",
+    "static/js/2.214bbc1c.chunk.js.LICENSE.txt": "/UniversityFinder/static/js/2.214bbc1c.chunk.js.LICENSE.txt",
+    "static/media/Akshay.8bd74ba6.jpeg": "/UniversityFinder/static/media/Akshay.8bd74ba6.jpeg",
+    "static/media/Meghna2.14e3759c.jpeg": "/UniversityFinder/static/media/Meghna2.14e3759c.jpeg",
+    "static/media/Shreya.96f4f3c7.jpeg": "/UniversityFinder/static/media/Shreya.96f4f3c7.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e05dc03b.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.214bbc1c.chunk.js",
+    "static/css/main.32df938b.chunk.css",
+    "static/js/main.f56cc496.chunk.js"
+  ]
+}
