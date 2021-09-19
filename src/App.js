@@ -3,14 +3,14 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  useHistory,
+  // useHistory,
 } from "react-router-dom";
 import "./App.css";
 import "./Card.css";
 import Landingpage from "./Landingpage.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import fire from "./fire";
-import index from "./index";
+// import index from "./index";
 import Login from "./Login";
 import Hero from "./Hero";
 import Register from "./Register";
@@ -27,7 +27,7 @@ function App() {
   const [hasAccount, setHasAccount] = useState(false);
 
   //cards
-  const [showAdvanced, setShowAdvanced] = useState(true);
+  // const [showAdvanced, setShowAdvanced] = useState(true);
 
   const clearInputs = () => {
     setEmail("");
