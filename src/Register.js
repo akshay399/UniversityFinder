@@ -1,6 +1,7 @@
 import { useState } from "react";
 import database from "./firbase";
 import "./Register.css";
+import Card from 'react-bootstrap/Card'
 
 import { Redirect } from "react-router-dom";
 import Advanced from "./examples/Advanced";
@@ -35,52 +36,83 @@ const Register = () => {
       </h2>
       <div className=" row justify-content-center">
         <div className=" col-12 col-sm-6 ">
-          <h5 className="container">Hey! welcome to unifinder</h5>
-          <center>
-            <input
-              placeholder="Enter your first name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-            <br />
-            <br />
-            <input
-              placeholder="Enter your last name"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-            />
-            <br />
-            <br />
-            <input
-              placeholder="Enter your phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
-            <br />
-            <br />
-            <input
-              placeholder="Enter your location"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-            />
-            <br />
-            <br />
-            <input
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <br />
-            <br />
-            <input
-              placeholder="Enter your prefered country"
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-            />
-            <br />
-            <br />
-            <button onClick={Push}>PUSH</button>
-          </center>
+          <Card className="form-container">
+            <center>
+              <div className="mb-3 p-3 ">
+                <label htmlFor="firstname" className="form-label  whitetext">
+                  First Name*
+                </label>
+                <input
+                  placeholder="Enter your first name"
+                  className="form-control"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                />
+              </div>
+
+              <div className="mb-3 p-3 ">
+                <label htmlFor="lastName" className="form-label  whitetext">
+                  Last Name*
+                </label>
+                <input
+                  placeholder="Enter your last name"
+                  className="form-control"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                />
+              </div>
+
+              <div className="mb-3 p-3 ">
+                <label htmlFor="lastName" className="form-label  whitetext">
+                  Phone Number*
+                </label>
+                <input
+                  placeholder="Enter your phone"
+                  className="form-control"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+              </div>
+
+              <div className="mb-3 p-3 ">
+                <label htmlFor="lastName" className="form-label  whitetext">
+                  Location*
+                </label>
+                <input
+                  placeholder="Enter your location"
+                  className="form-control"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                />
+              </div>
+
+              <div className="mb-3 p-3 ">
+                <label htmlFor="lastName" className="form-label  whitetext">
+                  Email Address*
+                </label>
+                <input
+                  placeholder="Enter your email"
+                  className="form-control"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+
+              <div className="mb-3 p-3 ">
+                <label htmlFor="lastName" className="form-label  whitetext">
+                  Expected College Location*
+                </label>
+                <input
+                  placeholder="Enter your prefered country"
+                  className="form-control"
+                  value={country}
+                  onChange={(e) => setCountry(e.target.value)}
+                />
+              </div>
+
+              <button className="Submitbtn p-2" onClick={Push}>SUBMIT</button>
+            </center>
+          </Card>
         </div>
       </div>
     </div>
