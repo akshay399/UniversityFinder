@@ -14,17 +14,24 @@ const Register = () => {
   const [country, setCountry] = useState();
 
   // Push Function
-  const Push = () => {
+  const Push = (e) => {
+    e.preventDefault();
+
     database
       .ref("students")
-      .push({
-        firstName: firstName,
-        lastName: lastName,
-        phone: phone,
-        location: location,
-        email: email,
-        country: country,
-      })
+      .push(
+        {
+          firstName: firstName,
+          lastName: lastName,
+          phone: phone,
+          location: location,
+          email: email,
+          country: country,
+        },
+        () => {
+          window.location.href = "/cards";
+        }
+      )
       .catch(alert);
   };
 
@@ -41,6 +48,7 @@ const Register = () => {
               placeholder="Enter your first name"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
+              required
             />
             <br />
             <br />
@@ -48,6 +56,7 @@ const Register = () => {
               placeholder="Enter your last name"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
+              required
             />
             <br />
             <br />
@@ -55,6 +64,7 @@ const Register = () => {
               placeholder="Enter your phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              required
             />
             <br />
             <br />
@@ -62,6 +72,7 @@ const Register = () => {
               placeholder="Enter your location"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
+              required
             />
             <br />
             <br />
@@ -69,6 +80,7 @@ const Register = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <br />
             <br />
@@ -76,6 +88,7 @@ const Register = () => {
               placeholder="Enter your prefered country"
               value={country}
               onChange={(e) => setCountry(e.target.value)}
+              required
             />
             <br />
             <br />
