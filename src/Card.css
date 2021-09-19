@@ -79,7 +79,7 @@ padding-left: 120px;
 .swipe:last-of-type {
 }
 
-.cardBeingSwiped h3 {
+.cardBeingSwiped h4 {
   position: absolute;
   bottom: 0;
   margin: 10px;

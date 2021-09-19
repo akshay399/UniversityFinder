@@ -4,24 +4,32 @@ import TinderCard from "react-tinder-card";
 
 const db = [
   {
-    name: "Richard Hendricks",
-    url: "./img/richard.jpg",
+    name: "Harvard ,US",
+    url: "./img/harvard.jpg",
   },
   {
-    name: "Erlich Bachman",
-    url: "./img/erlich.jpg",
+    name: "SBIST, TamilNadu",
+    url: "./img/sat.png",
   },
   {
-    name: "Monica Hall",
-    url: "./img/monica.jpg",
+    name: "IIT, Madras",
+    url: "./img/IITMAD.jpeg",
   },
   {
-    name: "Jared Dunn",
-    url: "./img/jared.jpg",
+    name: "DY.Patel,Maharastra",
+    url: "./img/dypatel.jpg",
   },
   {
-    name: "Dinesh Chugtai",
-    url: "./img/dinesh.jpg",
+    name: "DMCE, Maharastra",
+    url: "./img/dmcecollege.jpg",
+  },
+  {
+    name: "IIM, Ahmedabad",
+    url: "./img/iim.jpg",
+  },
+  {
+    name: "JIPMER, Puducherry",
+    url: "./img/JIPMER.jpg",
   },
 ];
 
@@ -99,7 +107,7 @@ function Advanced() {
                       style={{ backgroundImage: "url(" + character.url + ")" }}
                       className="cardBeingSwiped"
                     >
-                      <h3>{character.name}</h3>
+                      <h4>{character.name}</h4>
                     </div>
                   </TinderCard>
                 ))}
