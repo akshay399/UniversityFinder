@@ -1,7 +1,7 @@
 import { useState } from "react";
 import database from "./firbase";
 import "./Register.css";
-import Card from 'react-bootstrap/Card'
+import Card from "react-bootstrap/Card";
 
 import { Redirect } from "react-router-dom";
 import Advanced from "./examples/Advanced";
@@ -15,17 +15,24 @@ const Register = () => {
   const [country, setCountry] = useState();
 
   // Push Function
-  const Push = () => {
+  const Push = (e) => {
+    e.preventDefault();
+
     database
       .ref("students")
-      .push({
-        firstName: firstName,
-        lastName: lastName,
-        phone: phone,
-        location: location,
-        email: email,
-        country: country,
-      })
+      .push(
+        {
+          firstName: firstName,
+          lastName: lastName,
+          phone: phone,
+          location: location,
+          email: email,
+          country: country,
+        },
+        () => {
+          window.location.href = "/cards";
+        }
+      )
       .catch(alert);
   };
 
@@ -110,7 +117,9 @@ const Register = () => {
                 />
               </div>
 
-              <button className="Submitbtn p-2" onClick={Push}>SUBMIT</button>
+              <button className="Submitbtn p-2" onClick={Push}>
+                SUBMIT
+              </button>
             </center>
           </Card>
         </div>
