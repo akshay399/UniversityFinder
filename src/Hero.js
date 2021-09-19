@@ -17,7 +17,7 @@ const Hero = (props) => {
               <SmallCard link="/register" line="Fill Form" />
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-              <SmallCard line="Check Out Colleges" />
+              <SmallCard link="/cards " line="Check Out Colleges" />
             </div>
           </div>
         </div>
